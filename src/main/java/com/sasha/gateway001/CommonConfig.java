@@ -9,8 +9,8 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 @Configuration
 public class CommonConfig {
 
-    @Value("${DAP_APP_URL}")
-    String DAP_APP_URL;
+    @Value("${dap.app.url}")
+    String dapAppUrl;
 
     @Bean
     public Filter filter() {
@@ -23,7 +23,7 @@ public class CommonConfig {
             @Override
             public void addCorsMappings(CorsRegistry registry) {
                 registry.addMapping("/**")
-                        .allowedOrigins(DAP_APP_URL)
+                        .allowedOrigins(dapAppUrl)
                         .allowedMethods("GET", "POST");
             }
         };

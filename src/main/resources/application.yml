@@ -1,3 +1,4 @@
+dap.app.url: ${DAP_APP_URL}
 zuul:
   routes:
     images:
