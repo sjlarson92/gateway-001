@@ -2,7 +2,7 @@ zuul:
   routes:
     images:
       path: /api/images/**
-      url: http://localhost:8081/images
+      url: ${DAP_SERVICE_URL}/images
     prompts:
       path: /api/prompts/** # any requests made to gateway/api/prompts
-      url: http://localhost:8081/prompts
+      url: ${DAP_SERVICE_URL}/prompts
