@@ -1,0 +1,9 @@
+dap.app.url: ${DAP_APP_URL}
+zuul:
+  routes:
+    images:
+      path: /api/images/**
+      url: ${DAP_SERVICE_URL}/images
+    prompts:
+      path: /api/prompts/** # any requests made to gateway/api/prompts
+      url: ${DAP_SERVICE_URL}/prompts
