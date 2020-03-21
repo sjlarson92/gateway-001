@@ -7,3 +7,6 @@ zuul:
     prompts:
       path: /api/prompts/** # any requests made to gateway/api/prompts
       url: ${DAP_SERVICE_URL}/prompts
+    users:
+      path: /api/users/**
+      url: ${DAP_SERVICE_URL}/users
