@@ -6,6 +6,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 
 public class Filter extends ZuulFilter {
 
@@ -32,6 +33,9 @@ public class Filter extends ZuulFilter {
         RequestContext requestContext = RequestContext.getCurrentContext();
         HttpServletRequest httpServletRequest = requestContext.getRequest();
         logger.info("{} request to {}", httpServletRequest.getMethod(), httpServletRequest.getRequestURL().toString());
+
+        HttpServletResponse httpServletResponse = requestContext.getResponse();
+        httpServletResponse.setHeader("Access-Control-Expose-Headers", "*");
         return null;
     }
 }
