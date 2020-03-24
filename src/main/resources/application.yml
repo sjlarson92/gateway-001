@@ -10,3 +10,6 @@ zuul:
     users:
       path: /api/users/**
       url: ${DAP_SERVICE_URL}/users
+    login:
+      path: /api/login/**
+      url: ${DAP_SERVICE_URL}/login
