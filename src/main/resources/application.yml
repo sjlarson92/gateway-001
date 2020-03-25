@@ -12,4 +12,5 @@ zuul:
       url: ${DAP_SERVICE_URL}/users
     login:
       path: /api/login/**
+      sensitiveHeaders:
       url: ${DAP_SERVICE_URL}/login
