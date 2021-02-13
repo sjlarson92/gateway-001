@@ -14,3 +14,6 @@ zuul:
       path: /api/login/**
       sensitiveHeaders:
       url: ${DAP_SERVICE_URL}/login
+    health:
+      path: /api/actuator/**
+      url: ${DAP_SERVICE_URL}/actuator
