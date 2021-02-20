@@ -1,10 +1,10 @@
 dap.app.url: ${DAP_APP_URL}
 zuul:
   routes:
-    dap:
-      path: /api/**
-      url: ${DAP_SERVICE_URL}
     login:
       path: /api/login/**
       sensitiveHeaders:
       url: ${DAP_SERVICE_URL}/login
+    dap:
+      path: /api/**
+      url: ${DAP_SERVICE_URL}
