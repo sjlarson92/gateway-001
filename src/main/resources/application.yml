@@ -1,19 +1,6 @@
 dap.app.url: ${DAP_APP_URL}
 zuul:
   routes:
-    images:
-      path: /api/images/**
-      url: ${DAP_SERVICE_URL}/images
-    prompts:
-      path: /api/prompts/** # any requests made to gateway/api/prompts
-      url: ${DAP_SERVICE_URL}/prompts
-    users:
-      path: /api/users/**
-      url: ${DAP_SERVICE_URL}/users
-    login:
-      path: /api/login/**
-      sensitiveHeaders:
-      url: ${DAP_SERVICE_URL}/login
-    health:
-      path: /api/actuator/**
-      url: ${DAP_SERVICE_URL}/actuator
+    dap:
+      path: /api/**
+      url: ${DAP_SERVICE_URL}
