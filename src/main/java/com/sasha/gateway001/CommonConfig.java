@@ -24,7 +24,7 @@ public class CommonConfig {
             public void addCorsMappings(CorsRegistry registry) {
                 registry.addMapping("/**")
                         .allowedOrigins(dapAppUrl)
-                        .allowedMethods("GET", "POST");
+                        .allowedMethods("GET", "POST", "DELETE", "PUT");
             }
         };
     }
