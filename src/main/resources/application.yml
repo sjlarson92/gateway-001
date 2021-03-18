@@ -1,4 +1,5 @@
 dap.app.url: ${DAP_APP_URL}
+raspberrypi.url: ${RASPBERRYPI_URL}
 zuul:
   routes:
     login:

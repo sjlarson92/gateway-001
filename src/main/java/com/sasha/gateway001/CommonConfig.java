@@ -12,6 +12,9 @@ public class CommonConfig {
     @Value("${dap.app.url}")
     String dapAppUrl;
 
+    @Value("${raspberrypi.url}")
+    String raspberryPiUrl;
+
     @Bean
     public Filter filter() {
         return new Filter();
@@ -23,7 +26,7 @@ public class CommonConfig {
             @Override
             public void addCorsMappings(CorsRegistry registry) {
                 registry.addMapping("/**")
-                        .allowedOrigins(dapAppUrl)
+                        .allowedOrigins(dapAppUrl, raspberryPiUrl)
                         .allowedMethods("GET", "POST", "DELETE", "PUT");
             }
         };
